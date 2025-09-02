@@ -1,0 +1,187 @@
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #0dcaf0;
+}
+
+/* Custom styling for score visualization */
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+}
+
+.score-excellent {
+    background: linear-gradient(135deg, var(--success-color), #20c997);
+}
+
+.score-good {
+    background: linear-gradient(135deg, var(--info-color), var(--primary-color));
+}
+
+.score-fair {
+    background: linear-gradient(135deg, var(--warning-color), #fd7e14);
+}
+
+.score-poor {
+    background: linear-gradient(135deg, var(--danger-color), #e74c3c);
+}
+
+/* Progress bars for score breakdown */
+.score-item {
+    margin-bottom: 1rem;
+}
+
+.score-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.score-value {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Suggestion cards */
+.suggestion-card {
+    border-left: 4px solid var(--info-color);
+    transition: all 0.3s ease;
+}
+
+.suggestion-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-high {
+    border-left-color: var(--danger-color);
+}
+
+.suggestion-medium {
+    border-left-color: var(--warning-color);
+}
+
+.suggestion-low {
+    border-left-color: var(--info-color);
+}
+
+.priority-badge-high {
+    background-color: var(--danger-color);
+}
+
+.priority-badge-medium {
+    background-color: var(--warning-color);
+    color: var(--bs-dark);
+}
+
+.priority-badge-low {
+    background-color: var(--info-color);
+    color: var(--bs-dark);
+}
+
+/* File upload styling */
+#resume-file {
+    border: 2px dashed #dee2e6;
+    transition: border-color 0.3s ease;
+}
+
+#resume-file:hover {
+    border-color: var(--primary-color);
+}
+
+#resume-file:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .score-circle {
+        width: 120px;
+        height: 120px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Statistics grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--bs-gray-100);
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--bs-gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Custom scrollbar for suggestions */
+.suggestions-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.suggestions-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.suggestions-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
