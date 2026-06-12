@@ -87,6 +87,8 @@ gunicorn --bind 0.0.0.0:5000 --workers 4 main:app
 ```
 
 The application will be available at: `http://localhost:5000`
+or 
+"http://192.168.1.66:5000"
 
 ## 📁 Project Structure
 
